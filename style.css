@@ -2,5 +2,7 @@ p{
   color:green;
 }
 body{
-  background: purple;
+  background-image: linear-gradient(black, grey,
+    white,grey, black);
+  border-color: black;
 }
