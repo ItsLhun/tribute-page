@@ -15,6 +15,7 @@ body{
 }
 .imgdiv{
   display: flex;
+
   padding: 5%;
   margin: 10px;
   background-color: #455A64;
@@ -43,8 +44,13 @@ footer{
 }
 
 .quote{
+  box-sizing:unset;
+  box-decoration-break:clone;
+  box-shadow: darkcyan;
+  padding: 1% 1% 1% 1%;
+  background-color:cadetblue;
   font-family: 'Mr Dafoe', cursive;
-  font-size: large;
+  font-size:xx-large;
   color: #212121;
 }
 .block2{
