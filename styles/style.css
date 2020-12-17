@@ -1,24 +1,52 @@
+html{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+  background-color: #607D8B;
+  padding-top: 15px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 .main-heading{
-  font-size: 80px;
+  font-size: 5em;
   text-align: center;
   color: #FFFFFF
 }
-.img-div{
+.imgdiv{
   display: flex;
-  padding: 10px
-  margin: auto;
-  background-color: #455A64
+  padding: 5%;
+  margin: 10px;
+  background-color: #455A64;
 }
 p{
   color:green;
 }
+
 .mainBody{
-  background: #607D8B;
+  padding-top: 10px;
+  grid-template-columns: 30px 50px auto 50px 30px;
+  grid-template-rows: 25%, 50% auto;
+  padding-bottom: 5px;
+  margin-bottom: 1%;
+  border: #212121;
+  background-color: #455A64;
 }
-html{
-  font-family: monospace;
+footer{
+  padding-top: 10px;
+  grid-template-columns: 30px 50px auto 50px 30px;
+  grid-template-rows: 25%, minmax(2508px 50%) 25%;
+  padding-bottom: 5px;
+  margin-bottom: 1%;
+  border: #212121;
+  background-color: #455A64;
 }
+
 .quote{
   font-family: 'Mr Dafoe', cursive;
+  font-size: large;
   color: #212121;
+}
+.block2{
+  grid-row-start: 2;
 }
