@@ -1,52 +1,58 @@
 html{
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 body{
   background-color: #607D8B;
+  display: grid;
+  grid-template-columns: 8% 84% 8%;
+  grid-template-rows: 15% 35% 35% 15%;
+  min-height: 100vh;
   padding-top: 15px;
   padding-left: 2%;
   padding-right: 2%;
 }
 
 .main-heading{
-  font-size: 5em;
+  grid-column: 2;
+  grid-row: 1;
+  font-size: max(4vw, 18px);
   text-align: center;
-  color: #FFFFFF
+  color: #ffffff
 }
 .imgdiv{
-  display: flex;
-
   padding: 5%;
   margin: 10px;
   background-color: #455A64;
 }
 p{
-  color:green;
+  color:red;
+}
+img { /* This makes the image responsive to sizing*/
+  max-width: 100%;
+  height: auto;
 }
 
 .mainBody{
+  grid-row: 2-3;
+  grid-column: 2;
   padding-top: 10px;
-  grid-template-columns: 30px 50px auto 50px 30px;
-  grid-template-rows: 25%, 50% auto;
   padding-bottom: 5px;
   margin-bottom: 1%;
   border: #212121;
   background-color: #455A64;
 }
 footer{
+  grid-column: 2;
+  grid-row: 4;
   padding-top: 10px;
-  grid-template-columns: 30px 50px auto 50px 30px;
-  grid-template-rows: 25%, minmax(2508px 50%) 25%;
   padding-bottom: 5px;
   margin-bottom: 1%;
   border: #212121;
-  background-color: #455A64;
+  background-color: #4b4564;
 }
 
 .quote{
-  box-sizing:unset;
   box-decoration-break:clone;
-  box-shadow: darkcyan;
   padding: 1% 1% 1% 1%;
   background-color:cadetblue;
   font-family: 'Mr Dafoe', cursive;
@@ -54,5 +60,12 @@ footer{
   color: #212121;
 }
 .block2{
-  grid-row-start: 2;
+
+}
+@media (min-height){
+
+}
+
+@media (min-width){
+  
 }
