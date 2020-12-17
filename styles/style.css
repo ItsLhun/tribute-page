@@ -1,0 +1,24 @@
+.main-heading{
+  font-size: 80px;
+  text-align: center;
+  color: #FFFFFF
+}
+.img-div{
+  display: flex;
+  padding: 10px
+  margin: auto;
+  background-color: #455A64
+}
+p{
+  color:green;
+}
+.mainBody{
+  background: #607D8B;
+}
+html{
+  font-family: monospace;
+}
+.quote{
+  font-family: 'Mr Dafoe', cursive;
+  color: #212121;
+}
