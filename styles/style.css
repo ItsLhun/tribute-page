@@ -2,71 +2,80 @@ html{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 body{
-  background-color: #607D8B;
+  background-color: #c7ced1da;
   display: grid;
-  grid-template-columns: 8% 84% 8%;
-  grid-template-rows: 12% 10% 33% 30% 80px;
-  grid-gap: 8px;
+  grid-template-columns: 1fr 89% 1fr;
+  grid-template-rows: 12% 2% 10% 1% 31% 30% 80px;
+ /* grid-gap: 0px;*/
   min-height: 100vh;
-  padding-top: 1px;
+  padding-top: 4px;
   padding-left: 2%;
   padding-right: 2%;
 }
 
+
+
 .main-heading{
   grid-column: 2;
   grid-row: 1;
-  font-size: max(4vw, 18px);
+  font-size: max(4vw, 41px);
   text-align: center;
   color: #ffffff;
   background-color:#212121; 
+  padding: 2% 2% 2% 2%;
 }
-
-.second-heading, h2{
+.midrow{
   grid-column: 2;
   grid-row: 2;
-  font-size: max(2vw, 12px);
+  background-color: rgba(219, 96, 59, 0.856);
+  color: rgba(219, 96, 59, 0.856);
   text-align: center;
-  color: #112c68;
-  background-color:#212121; 
 }
-
-.imgdiv{
+.second-heading, h2{
   grid-column: 2;
   grid-row: 3;
-  padding: 1%;
-  margin: 10px;
-  background-color: #455A64;
+  padding: 1% 1% 1% 1%;
+  font-size: max(1.5vw, 26px);
+  text-align: center;
+  color: lightgray;
+  background-color:#212121; 
 }
-p{
-  color:red;
+.midrow2{
+  grid-column: 2;
+  grid-row: 4;
+  background-color:rgba(219, 96, 59, 0.856);
+  color: rgba(219, 96, 59, 0.856);
+  text-align: center;
 }
+
+.imageslot{
+  grid-column: 2;
+  grid-row: 5;
+  padding: 1% 1% 1% 1%;
+  margin-top: 1vh;
+  color:lightgreen;
+  text-align: center;
+  background-color: #637f8b;
+}
+
 img { /* This makes the image responsive to sizing*/
-  max-width: 100%;
+  max-width: 63%;
   height: auto;
+  min-width:38vh;
 }
 
 .mainBody{
   grid-column: 2;
-  grid-row: 4;
+  grid-row: 6;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 1%;
   border: #212121;
-  background-color: #455A64;
-}
-footer{
-  grid-column: 2;
-  grid-row: 5;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  margin-bottom: 1%;
-  border: #212121;
-  background-color: #4b4564;
+  background-color: #637f8b;
 }
 
+
 .quote{
-  box-decoration-break:clone;
   padding: 1% 1% 1% 1%;
   background-color:cadetblue;
   font-family: 'Mr Dafoe', cursive;
@@ -74,8 +83,25 @@ footer{
   color: #212121;
 }
 .block2{
-  color:aqua;
+  color:whitesmoke;
+  font-size:x-large;
+  padding: 1% 1% 1% 1%;
+  justify-self: center;
+  text-align: justify;
 }
+
+footer{
+  grid-column: 2;
+  grid-row: 7;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  text-align: center;
+  margin-bottom: 1%;
+  border: #212121;
+  color: #637f8b;
+  background-color: rgba(219, 96, 59, 0.856);
+}
+
 @media (min-height){
 
 }
