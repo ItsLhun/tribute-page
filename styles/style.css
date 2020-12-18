@@ -5,9 +5,10 @@ body{
   background-color: #607D8B;
   display: grid;
   grid-template-columns: 8% 84% 8%;
-  grid-template-rows: 15% 35% 35% 15%;
+  grid-template-rows: 12% 10% 33% 30% 80px;
+  grid-gap: 8px;
   min-height: 100vh;
-  padding-top: 15px;
+  padding-top: 1px;
   padding-left: 2%;
   padding-right: 2%;
 }
@@ -17,10 +18,23 @@ body{
   grid-row: 1;
   font-size: max(4vw, 18px);
   text-align: center;
-  color: #ffffff
+  color: #ffffff;
+  background-color:#212121; 
 }
+
+.second-heading, h2{
+  grid-column: 2;
+  grid-row: 2;
+  font-size: max(2vw, 12px);
+  text-align: center;
+  color: #112c68;
+  background-color:#212121; 
+}
+
 .imgdiv{
-  padding: 5%;
+  grid-column: 2;
+  grid-row: 3;
+  padding: 1%;
   margin: 10px;
   background-color: #455A64;
 }
@@ -33,9 +47,9 @@ img { /* This makes the image responsive to sizing*/
 }
 
 .mainBody{
-  grid-row: 2-3;
   grid-column: 2;
-  padding-top: 10px;
+  grid-row: 4;
+  padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 1%;
   border: #212121;
@@ -43,7 +57,7 @@ img { /* This makes the image responsive to sizing*/
 }
 footer{
   grid-column: 2;
-  grid-row: 4;
+  grid-row: 5;
   padding-top: 10px;
   padding-bottom: 5px;
   margin-bottom: 1%;
@@ -60,7 +74,7 @@ footer{
   color: #212121;
 }
 .block2{
-
+  color:aqua;
 }
 @media (min-height){
 
