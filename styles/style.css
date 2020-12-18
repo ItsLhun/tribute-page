@@ -1,0 +1,236 @@
+html{
+  font-family: /*Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
+}
+body{
+  background: linear-gradient(white 700px, black 0);
+  display: grid;
+  grid-template-columns: 1fr 89% 1fr;
+  grid-template-rows: 12% 2% 10% 1% 31% 30% 80px;
+ /* grid-gap: 0px;*/
+  min-height: 100vh;
+  padding-top: 4px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+
+
+.main-heading{
+  font: 'Amatic SC', cursive;
+  grid-column: 2;
+  grid-row: 1;
+  font-size: max(4vw, 41px);
+  text-align: center;
+  color: #ffffff;
+  background-color:#212121; 
+  padding: 2% 2% 2% 2%;
+  margin-top: 4px;
+}
+.midrow{
+  grid-column: 2;
+  grid-row: 2;
+  background-color: rgba(219, 96, 59, 0.856);
+  color: rgba(219, 96, 59, 0.856);
+  text-align: center;
+}
+.second-heading, h2{
+  grid-column: 2;
+  grid-row: 3;
+  padding: 1% 1% 1% 1%;
+  font-size: max(1.5vw, 26px);
+  text-align: center;
+  color: lightgray;
+  background-color:#212121; 
+}
+.midrow2{
+  grid-column: 2;
+  grid-row: 4;
+  background-color:rgba(219, 96, 59, 0.856);
+  color: rgba(219, 96, 59, 0.856);
+  text-align: center;
+}
+
+.imageslot{
+  grid-column: 2;
+  grid-row: 5;
+  padding: 1% 1% 1% 1%;
+  margin-top: 1vh;
+  color:lightgreen;
+  text-align: center;
+  background-color: #637f8b;
+}
+
+img { /* This makes the image responsive to sizing*/
+  max-width: 63%;
+  height: auto;
+  min-width:38vh;
+  border-style: dotted;
+  border-color: aliceblue;
+}
+img:hover{
+
+}
+
+.mainBody{
+  grid-column: 2;
+  grid-row: 6;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 1%;
+  border: #212121;
+  background-color: #637f8b;
+}
+
+
+.quote{
+  display: flexbox;
+  flex-direction: row;
+  padding: 1% 1% 1% 5%;
+  font-weight: lighter;
+  color: #212121;
+  padding: 5px 10px 5px 10px;
+}
+.quote-element{
+  text-align: center;
+  font-size: max(1.5vw, 24px);
+  font-family: 'Caveat', cursive;
+  text-shadow: rgba(2, 5, 29, 0.863) 1px 0 10px;
+}
+
+#quotep1{
+  text-align: center;
+
+}
+#quotep2{
+  text-align: center;
+}
+#quotep3{
+  text-align: center;
+}
+#quotep4{
+  text-align: center;
+}
+.block2{
+  color:whitesmoke;
+  font-size:x-large;
+  padding: 1% 1% 1% 1%;
+  justify-self: center;
+  text-align: justify;
+}
+
+footer{
+  grid-column: 2;
+  grid-row: 7;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  text-align: center;
+  margin-bottom: 1%;
+  border: #212121;
+  color: #637f8b;
+  background-color: rgba(219, 96, 59, 0.856);
+}
+
+@media (min-height){
+
+}
+
+@media (min-width){
+  
+}
+@keyframes bounce {
+  60%, 80%, to { 
+    transform: translateY(400px); 
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+  }
+  70% { transform: translateY(300px); }
+  90% { transform: translateY(360px); }
+}
+@keyframes roll {
+  from { 
+    transform: translateY(400px) rotate(0deg);
+  }
+  to { 
+    transform: translate(400px, 400px) rotate(359deg);
+  }
+}
+
+
+body {
+	min-height: 100vh;
+}
+
+.ball {
+  width: 3.2vh;
+  height: 3.2vh;
+  grid-column: 1;
+  background: rgb(255,140,105);
+  background: radial-gradient(at 30% 30%,  rgba(251,199,199,1), rgba(255,140,105,1));
+
+  border-radius: 50%;
+  margin: 0;
+  
+  animation: bounce 2s cubic-bezier(.755, .05, .855, .06) forwards,
+             roll 3s 2.05s ease forwards;
+}
+}
+
+/*
+.circle {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+  background: -webkit-radial-gradient(25px 25px, circle, blue, #000);
+  background: -moz-radial-gradient(25px 25px, circle, blue, #000);
+  background: radial-gradient(25px 25px, circle, red, #000);
+ 
+  /* Animation to spin and move the sphere *//*
+  -webkit-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  -moz-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  -ms-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+  
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  
+  position: absolute;
+  left: 0;
+}
+
+/* Spinning the sphere using key frames *//*
+@-ms-keyframes spin {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+
+/* Move sphere from left to right *//*
+@-moz-keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+@-ms-keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+@keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+@-webkit-keyframes moveLeftToRight {
+  0%   { left: -100px; }
+  100% { left: 100%; }
+}
+*/
