@@ -76,11 +76,30 @@ img { /* This makes the image responsive to sizing*/
 
 
 .quote{
-  padding: 1% 1% 1% 1%;
-  background-color:cadetblue;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+  padding: 1% 1% 1% 5%;
   font-family: 'Mr Dafoe', cursive;
+  font-weight: lighter;
   font-size:xx-large;
   color: #212121;
+}
+#quotep1{
+  grid-column: 1;
+  grid-row: 1;
+}
+#quotep2{
+  grid-column: 2;
+  grid-row: 2;
+}
+#quotep3{
+  grid-column: 3;
+  grid-row: 3;
+}
+#quotep4{
+  grid-column: 4;
+  grid-row: 4;
 }
 .block2{
   color:whitesmoke;
