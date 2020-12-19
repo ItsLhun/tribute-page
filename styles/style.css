@@ -4,7 +4,7 @@ html{
 body{
   background: linear-gradient(white 700px, black 0);
   display: grid;
-  grid-template-columns: 1fr 89% 1fr;
+  grid-template-columns: auto 65% auto;
   grid-template-rows: 12% 2% 10% 1% 31% 30% 80px;
  /* grid-gap: 0px;*/
   min-height: 100vh;
@@ -16,10 +16,10 @@ body{
 
 
 .main-heading{
-  font: 'Amatic SC', cursive;
+  font-family: 'Amatic SC', cursive;
   grid-column: 2;
   grid-row: 1;
-  font-size: max(4vw, 41px);
+  font-size: max(5vw, 58px);
   text-align: center;
   color: #ffffff;
   background-color:#212121; 
@@ -37,7 +37,8 @@ body{
   grid-column: 2;
   grid-row: 3;
   padding: 1% 1% 1% 1%;
-  font-size: max(1.5vw, 26px);
+  font-size: max(3vw, 42px);
+  font-family: 'Amatic SC', cursive;
   text-align: center;
   color: lightgray;
   background-color:#212121; 
@@ -61,18 +62,16 @@ body{
 }
 
 img { /* This makes the image responsive to sizing*/
-  max-width: 63%;
+  max-width: 75%;
   height: auto;
-  min-width:38vh;
+  min-width:31vh;
   border: 3px solid white;
-  border-style: dotted;
+  border-style:groove;
   border-color: aliceblue;
-}
-img:hover{
- /*pending*/
 }
 
 .mainBody{
+  justify-self: stretch;
   grid-column: 2;
   grid-row: 6;
   padding-top: 5px;
@@ -93,7 +92,7 @@ img:hover{
 }
 .quote-element{
   text-align: center;
-  font-size: max(1.5vw, 24px);
+  font-size: max(1.5vw, 2.5vh, 80%);
   font-family: 'Caveat', cursive;
   text-shadow: rgba(2, 5, 29, 0.863) 1px 0 10px;
 }
@@ -114,129 +113,100 @@ img:hover{
 .block2{
   color:whitesmoke;
   font-size:x-large;
-  padding: 1% 1% 1% 1%;
+  padding: 1% 10% 1% 10%;
   justify-self: center;
-  text-align: justify;
+  text-align: center;
 }
 
 footer{
   grid-column: 2;
   grid-row: 7;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 5px;
   text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
   margin-bottom: 1%;
   border: #212121;
-  color: #637f8b;
+  color: #042431;
   background-color: rgba(219, 96, 59, 0.856);
 }
 
-@media (min-height){
-
+.prefooter{
+  color:whitesmoke;
+  font-size:larger;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  color: #042431;
 }
 
-@media (min-width){
+@media (min-height: 350px){
   
 }
-@keyframes bounce {
-  from {transform: translate3d(0, 0 ,0 );}
-   60%, 80% { 
-    transform: translateY(1050vh); 
-    animation-timing-function: cubic-bezier(.215, .91, 1.355, 2.334, 3.5);
-  } 
-  75% { transform: translateY(70vh); }
-  90% { transform: translateY(90vh); }
-  82% { transform: translateY(82vh);}
-  100% { transform: translateY(100vh)}
+
+
+@media (max-width: 501px){
+  /*img { /* This makes the image responsive to sizing*/
+   /* max-width: 99%;
+    height: auto;
+    min-width:31vh;
+    border: 3px solid white;
+    border-style:groove;
+    border-color: aliceblue;
+  }*/
+  body{
+    grid-template-columns: auto 80% auto;
+  }
+
   
-}
-@keyframes roll {
-  from { 
-    transform: translateY(100vh) rotate(0deg);
-  }
-  to { 
-    transform: translate(400px, 100vw) rotate(359deg);
-  }
-}
 
 
-body {
-	min-height: 100vh;
-}
+#ball {
+  background: #f00;
+	border-radius: 50%;
+	height: 3vh;
+	width: 3vh;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	animation: studs 0.3s ease-out infinite alternate, move 4s ease-out both;
 
-.ball {
+}
+body:hover #ball,
+body:hover #frame {
+	animation-play-state: paused;
+}
+#frame {
+  grid-row: 1;
+  grid-column: 2;
   position: relative;
-  width: 3.5vh;
-  height: 3.5vh;
-  grid-column: 1;
-  background: rgb(255,140,105);
-  background: radial-gradient(at 30% 30%,  rgba(251,199,199,1), rgba(255,140,105,1));
+	height:initial;
+	animation: gravity 4s ease-in both;
+}
 
-  border-radius: 50%;
-  margin: 0;
+@keyframes studs {
+	to {
+		bottom: 100%;
+	}
+}
+@keyframes move {
+	to {
+		left: 100vw;
+	}
+}
+@keyframes gravity{
+	to {
+		height: 0px;
+    margin-bottom: 0px;
+  }
+}
   
-  animation: bounce 4s cubic-bezier(.755, .05, .855, .06) forwards,
-             roll 3s 2.05s ease forwards;
-}
-
-
-/*
-.circle {
-  display: block;
-  width: 100px;
-  height: 100px;
-  background: red;
-  border-radius: 50%;
-  background: -webkit-radial-gradient(25px 25px, circle, blue, #000);
-  background: -moz-radial-gradient(25px 25px, circle, blue, #000);
-  background: radial-gradient(25px 25px, circle, red, #000);
- 
-  /* Animation to spin and move the sphere *//*
-  -webkit-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
-  -moz-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
-  -ms-animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
-  animation: spin 1000ms linear infinite, moveLeftToRight 5s linear infinite;
+@keyframes roll{
+    to {
+      bottom: 0%, ease-out;
+    }
   
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  
-  position: absolute;
-  left: 0;
 }
-
-/* Spinning the sphere using key frames *//*
-@-ms-keyframes spin {
-  from { -ms-transform: rotate(0deg); }
-  to { -ms-transform: rotate(360deg); }
-}
-@-moz-keyframes spin {
-  from { -moz-transform: rotate(0deg); }
-  to { -moz-transform: rotate(360deg); }
-}
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-@-webkit-keyframes spin {
-  from { -webkit-transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); }
-}
-
-/* Move sphere from left to right *//*
-@-moz-keyframes moveLeftToRight {
-  0%   { left: -100px; }
-  100% { left: 100%; }
-}
-@-ms-keyframes moveLeftToRight {
-  0%   { left: -100px; }
-  100% { left: 100%; }
-}
-@keyframes moveLeftToRight {
-  0%   { left: -100px; }
-  100% { left: 100%; }
-}
-@-webkit-keyframes moveLeftToRight {
-  0%   { left: -100px; }
-  100% { left: 100%; }
-}
-*/
