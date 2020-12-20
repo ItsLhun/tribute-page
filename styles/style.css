@@ -3,14 +3,19 @@ html{
 }
 body{
   background: linear-gradient(white 700px, black 0);
-  display: grid;
-  grid-template-columns: auto 65% auto;
-  grid-template-rows: 12% 2% 10% 1% 31% 30% 80px;
+  
+  
  /* grid-gap: 0px;*/
   min-height: 100vh;
   padding-top: 4px;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#principaldiv{
+  display: grid;
+  grid-template-columns: auto 65% auto;
+  grid-template-rows: 0.12fr 0.02fr 0.1fr 1% 0.3fr 0.3fr 0.1fr;
 }
 
 
